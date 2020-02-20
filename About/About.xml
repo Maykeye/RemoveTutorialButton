@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Remove tutorial button</name>
+	<author>Maykeye</author>
+	<url>https://github.com/Maykeye/RemoveTutorialButton</url>
+	<supportedVersions>
+		<li>1.1</li>
+	</supportedVersions>
+	<packageId>maykeye.RemoveTutorialButton</packageId>
+	<description>Based on video by Shaun McFall on youtube (RimWorld Mod - Remove Tutorial Button, ?v=Q77szOSnQeA), 
+		but modernised to use Harmony and work in 1.1</description>
+</ModMetaData>
