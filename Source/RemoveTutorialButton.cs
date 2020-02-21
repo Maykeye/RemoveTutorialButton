@@ -62,16 +62,10 @@ namespace RemoveTutBut
             // Another sanity check. 
             if (i == expectedCallPosition && hashSoFar == expectedHash)
             {
-                // Original call is 5 bytes long. We replace it with
-                // Two pops and three NOPs (each instruction is 1 byte long) to 
-                // Pop Action
+                // Remove List.Add call: Pop Action argument
                 code[expectedCallPosition] = new CodeInstruction(OpCodes.Pop);
-                // Pop List
+                // Pop List argument
                 code.Insert(expectedCallPosition+1, new CodeInstruction(OpCodes.Pop));
-                // Rewrite tail of call with nops
-                code.Insert(expectedCallPosition+2, new CodeInstruction(OpCodes.Nop));
-                code.Insert(expectedCallPosition+2, new CodeInstruction(OpCodes.Nop));
-                code.Insert(expectedCallPosition+2, new CodeInstruction(OpCodes.Nop));
             }
             else
             {
